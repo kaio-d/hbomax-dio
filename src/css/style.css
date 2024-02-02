@@ -169,7 +169,6 @@ body {
   font-weight: 300;
 }
 
-
 .header-obs {
   color: var(--text-color);
   margin: 2% 0;
@@ -242,7 +241,6 @@ body {
   padding-left: 14px;
 }
 
-
 .itens-plano::marker {
   content: "+";
   font-size: 2rem;
@@ -310,4 +308,32 @@ body {
 }
 .card-image:nth-child(6):hover {
   background-image: url(../images/UCL-Hover.webp);
+}
+
+.rodape {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.rodape-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: var(--link-color);
+  text-transform: uppercase;
+  margin: 0 14px;
+  letter-spacing: 2px;
+  transition: color 0.5s;
+  font-size: 0.875rem;
+}
+
+.rodape-link:hover {
+  color: var(--btn-link-bg-color);
+}
+
+.footer-descricao {
+  font-size: 0.75rem;
+  margin: 16px 0;
+  color: var(--link-color);
 }
