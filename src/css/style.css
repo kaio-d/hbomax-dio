@@ -113,6 +113,7 @@ body {
   padding: 100px 0 300px;
   background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
   background-size: 400% 400%;
+  animation: gradient 5s ease infinite alternate;
 }
 
 .header::after {
@@ -122,6 +123,11 @@ body {
   position: absolute;
   bottom: 0;
   background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+.header a {
+  transition: 0.5;
+  animation: wiggle 2.2s linear infinite;
 }
 
 .header .canais {
@@ -201,6 +207,16 @@ body {
   justify-content: space-around;
   gap: 80px;
   margin: 40px 0;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+
+.nossos-planos:has(.card:nth-child(1):hover) .card:nth-child(2) {
+  transform: rotateY(-45deg);
+}
+
+.nossos-planos:has(.card:nth-child(2):hover) .card:nth-child(1) {
+  transform: rotateY(45deg);
 }
 
 .card {
@@ -211,6 +227,7 @@ body {
   min-height: 600px;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 1s ease-in-out;
 }
 
 .card-plano {
@@ -336,4 +353,54 @@ body {
   font-size: 0.75rem;
   margin: 16px 0;
   color: var(--link-color);
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+/* Animações */
+
+@keyframes wiggle {
+  0%,
+  10% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%,
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
