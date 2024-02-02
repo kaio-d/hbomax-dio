@@ -54,7 +54,7 @@ button {
   z-index: 1;
 }
 
-.menu-logo{
+.menu-logo {
   max-width: 160px;
 }
 
@@ -87,10 +87,20 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: relative;
   padding: 100px 0 300px;
   background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
   background-size: 400% 400%;
+}
+
+.header::after {
+  content: "";
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(0deg, var(--primary-color), transparent);
 }
 
 .header .canais {
@@ -101,3 +111,65 @@ button {
   flex-wrap: wrap;
 }
 
+.header-titulo {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.header-titulo span {
+  display: block;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.line {
+  width: 70%;
+  max-width: 700px;
+  height: 5px;
+  background: var(--divider-bg-color);
+}
+
+.ofertas {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: var(--text-color);
+}
+
+.ofertas p:nth-child(2) {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.ofertas p span {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.header-button {
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 16px 40px;
+  background: var(--btn-bg-color-gradient);
+  border-radius: 500px;
+  letter-spacing: 4px;
+  transition: background 1s, outline 1s, transform 1s;
+}
+
+.header-button:hover {
+  background: transparent;
+  background-position: 100%;
+  outline: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.header-obs {
+  color: var(--text-color);
+  margin: 2% 0;
+  max-width: 300px;
+  text-align: center;
+}
