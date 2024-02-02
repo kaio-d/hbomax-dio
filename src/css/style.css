@@ -36,20 +36,27 @@ body {
   color: var(--text-color);
 }
 
-button {
-  text-transform: uppercase;
+.button {
   padding: 16px 40px;
-  background: var(--btn-bg-color-gradient);
-  border: none;
+  background-color: var(--tertiary-color);
   border-radius: 500px;
-  letter-spacing: 4px;
-  cursor: pointer;
-  color: var(--text-color);
   font-weight: 700;
-  transition: background 1s, outline 1s;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 4px;
+  border: none;
+  cursor: pointer;
 }
 
-button:hover {
+.button-gradient {
+  background: var(--btn-bg-color-gradient);
+  outline: 3px solid transparent;
+  transition: background 1s, outline 1s, transform 1s;
+  background-size: 250%;
+}
+
+.button:hover {
   background: transparent;
   background-position: 100%;
   outline: 2px solid var(--secondary-color);
@@ -128,7 +135,6 @@ button:hover {
   text-transform: uppercase;
   text-align: center;
   font-size: 3rem;
-  color: var(--text-color);
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -149,7 +155,6 @@ button:hover {
 .ofertas {
   margin-top: 2%;
   margin-bottom: 2%;
-  color: var(--text-color);
 }
 
 .ofertas p:nth-child(2) {
@@ -163,22 +168,6 @@ button:hover {
   font-weight: 300;
 }
 
-.header-button {
-  color: var(--text-color);
-  font-weight: 700;
-  padding: 16px 40px;
-  background: var(--btn-bg-color-gradient);
-  border-radius: 500px;
-  letter-spacing: 4px;
-  transition: background 1s, outline 1s, transform 1s;
-}
-
-.header-button:hover {
-  background: transparent;
-  background-position: 100%;
-  outline: 2px solid var(--secondary-color);
-  transform: scale(1.05);
-}
 
 .header-obs {
   color: var(--text-color);
@@ -189,7 +178,7 @@ button:hover {
 
 .planos {
   background: url("../images/background-movies-series.png") no-repeat;
-  background-color: #020228;
+  background-color: var(--primary-color);
   background-size: cover;
   position: relative;
 }
