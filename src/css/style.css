@@ -33,6 +33,7 @@
 }
 
 body {
+  background-color: var(--primary-color);
   color: var(--text-color);
 }
 
@@ -246,4 +247,67 @@ body {
   content: "+";
   font-size: 2rem;
   margin: 0 8px 0 0;
+}
+
+.catalogos {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.catalogo-tittle {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.catalogo-cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.card-image {
+  border-radius: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.card-image:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--tertiary-color);
+}
+
+.card-image:hover .card-details {
+  opacity: 0;
+}
+
+.card-details {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
+
+.card-image:nth-child(1):hover {
+  background-image: url(../images/hbo-hover_0.webp);
+}
+.card-image:nth-child(2):hover {
+  background-image: url(../images/MAX-Hover.webp);
+}
+.card-image:nth-child(3):hover {
+  background-image: url(../images/DC-Hover.webp);
+}
+.card-image:nth-child(4):hover {
+  background-image: url(../images/WB-Hover.webp);
+}
+.card-image:nth-child(5):hover {
+  background-image: url(../images/CN-Hover.png);
+}
+.card-image:nth-child(6):hover {
+  background-image: url(../images/UCL-Hover.webp);
 }
