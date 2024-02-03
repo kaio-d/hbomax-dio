@@ -9,6 +9,7 @@
   width: 100%;
   height: 70%;
   padding: 9%;
+  margin: auto;
 }
 
 .login {
@@ -60,3 +61,23 @@ input:invalid {
   border: 1px solid var(--form-field-error);
 }
 
+@media screen and (max-width:767px) {
+  .login {
+    margin-top: 150px;
+  }
+
+  .login-link {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  button {
+    width: 150px;
+  }
+
+  .opcoes-login {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+}

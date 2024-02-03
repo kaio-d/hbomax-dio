@@ -33,6 +33,7 @@
 }
 
 body {
+  min-width: 375px;
   background-color: var(--primary-color);
   color: var(--text-color);
 }
@@ -65,14 +66,15 @@ body {
 }
 
 .menu {
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: var(--nav-bg-color);
   padding: 12px 16px;
-  align-items: center;
   position: fixed;
   z-index: 1;
+  align-items: center;
 }
 
 .menu-logo {
@@ -136,6 +138,7 @@ body {
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header-titulo {
@@ -361,6 +364,71 @@ body {
   align-items: center;
   gap: 40px;
   margin-top: 80px;
+}
+
+/* Media Querie */
+
+@media screen and (max-width: 767px) {
+  .menu {
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+
+  .menu-logo {
+    max-width: 100px;
+  }
+
+  .menu-logo img {
+    margin-bottom: 20px;
+  }
+
+  .header {
+    margin-top: 40px !important;
+  }
+
+  .header-titulo,
+  .ofertas {
+    margin: 24px 0;
+  }
+
+  .header-obs {
+    margin-top: 24px;
+  }
+
+  .nossos-planos {
+    flex-direction: column;
+  }
+
+  .rodape div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .catalogo-cards {
+    grid-template-columns: repeat(6, 100%);
+    grid-auto-flow: column;
+    overflow: auto hidden;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header-titulo,
+  .ofertas {
+    margin: 24px 0;
+  }
+
+  .header-obs {
+    margin-top: 24px;
+  }
+
+  .nossos-planos {
+    flex-direction: column;
+  }
+
+  .catalogo-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Animações */
