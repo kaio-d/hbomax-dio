@@ -4,8 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HBO Max | Entrarr</title>
+  <link rel="stylesheet" href="./src/css/signin.css">
 </head>
 <body>
+  <nav class="menu">
+    <a href="./index.html" class="menu-logo">
+      <img src="./src/images/hbo-logo.svg" alt="Logo da HBO Max" />
+    </a>
+    <div class="menu-botoes">
+      <a class="menu-entrar" href="./signin.html">Entrar</a>
+      <a class="menu-button" href="#planos">Assine Agora</a>
+    </div>
+  </nav>
+
+  <main class="container">
+      <form class="login">
+        <h1 class="login-tittle">Entrar</h1>
+        <label class="login-label">Você tem uma conta da HBO Max?</label>
+        <input type="email" class="input-field" placeholder="Endereço de email">
+        <input type="password" minlength="8" class="input-field" placeholder="Senha">
+        <div class="opcoes-login">
+          <button class="button button-gradient">Entrar</button>
+          <a href="#" class="login-link">Esqueceu a senha</a>
+        </div>
+      </form>
+  </main>
   
+  <footer class="rodape">
+    <div>
+      <a href="#" class="rodape-link">Agora na HBO</a>
+      <a href="#" class="rodape-link">Em breve</a>
+      <a href="#" class="rodape-link">Filmes em destaque</a>
+      <a href="#" class="rodape-link">Séries</a>
+      <a href="#" class="rodape-link">Ajuda</a>
+    </div>
+    <p class="footer-descricao">© 2022 WarnerMedia Direct Latin America, LLC. Todos os direitos reservados. HBO Max é usado sob licença.</p>
+    <div class="redes-sociais">
+      <a href="#">
+        <img src="./src/images/fb_0.png" alt="Logo Facebook">
+      </a>
+      <a href="#">
+        <img src="./src/images/twitter_0.png" alt="Logo Twitter">
+      </a>
+      <a href="#">
+        <img src="./src/images/instagram_0.png" alt="Logo Instagram">
+      </a>
+      <a href="#">
+        <img src="./src/images/youtube_0.png" alt="Logo Youtube">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
